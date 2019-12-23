@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>About Us</title>
+</head>
+<style>
+	html,body{
+		padding: 0;
+		margin:0;
+		font-family: roboto;
+	}
+	.menu-malasngoding {
+		background: linear-gradient(to bottom, #0099ff 0%, #ffffff 110%);
+		position : relative;
+		width: 100%;
+		height: 120px;
+		margin: 0px;
+	}
+		
+	
+ 
+	.menu-malasngoding ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+	}
+ 
+	.menu-malasngoding > ul > li {
+		float: left;
+	}
+ 
+	
+	.menu-malasngoding li a {
+		display: inline-block;
+		color: black;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		z-index: 5;
+	}
+ 
+	.menu-malasngoding li a:hover{
+		color : #e60000
+	}
+	
+	li.dropdown {
+		display: block;
+		z-index: 5;
+	}
+ 
+	.dropdown:hover .isi-dropdown {
+		display: block;
+		z-index: 5;
+	}
+ 
+	.isi-dropdown a:hover {
+		color: #e60000 !important;
+	}
+ 
+	.isi-dropdown {
+		position: absolute;
+		display:none;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 50;
+		background-color: #e6f2ff;
+	}
+ 
+	.isi-dropdown a {
+		color: #3c3c3c !important;
+		z-index: 5;
+	}
+ 
+	.isi-dropdown a:hover {
+		color: #e60000 !important;
+		z-index: 5;
+	}
+	
+	.header {
+		Padding: 10px 0px 0px 10px;;
+		font-family : arial;	
+		color: blue;
+	}
+	.login {
+		float: right;
+		color: green;
+		}
+	.login a {
+		font-size: 18px;
+		margin : 10px 40px 10px 10px;
+		color: green;
+		text-decoration: none;
+		}
+	.login a:hover{
+		color: white;
+		font-style: italic;
+		}
+
+	.judul {
+		font-size: 25px;
+		font-family: Arial;
+		font-weight: bold;
+		
+	}
+	.card {
+		box-shadow:0 4px 20px 0 rgba(0, 0, 0, 0.2);
+		max-width: 700px; /*membuat ukuran div class card dengan ukuran lebar max 300px*/
+		margin: left; /* membuat margin rata tengah */
+		text-align: left; /* membuat semua bentuk text dan tombil button rata tengah */
+		font-family :arial;
+	}
+	.row:after{
+			content:"";
+			display: table;
+			clear: both;
+			
+	}
+	.column {
+			text-align:center ;
+			
+	}
+	.container {
+	  position: relative;
+	  text-align: center;
+	  color: white;
+	}
+	
+	* {
+	box-sizing: border-box;
+	}
+	.footer {
+		position : absolute;
+		
+		background-color: #0099ff;
+		width: 100%;
+		height: 150px;
+		
+	}
+	.footer:after {
+		content: "";
+		display: table;
+		clear: both;
+		
+	}
+	.isi-footer{
+		background-color: red;
+		width : 33.33%;
+		height: 100%;
+		padding : 40px 100px 40px 100px;
+		float : left;
+		color : white;
+		}
+		.tanggal{
+		color: grey;
+		
+		}
+</style>
+<body>
+<div class="menu-malasngoding">
+	<div class="header">
+		<img src="image/judul.png" height="55px" width="170px">
+	</div>
+	<div class="login"><a href="#">Login</a></div>
+		<ul>
+			<li><a href="Tugas-pw-akhir.html">Home</a></li>
+			<li><a href="#">Jateng News</a></li>
+			<li class="dropdown"><a href="#">Seputar Jateng</a>
+				<ul class="isi-dropdown">
+					<li><a href="#">Semarang</a></li>
+					<li><a href="#">Kebumen</a></li>
+					<li><a href="#">Purworejo</a></li>
+					<li><a href="#">Banyumas</a></li>
+					<li><a href="#">Demak</a></li>
+					<li><a href="#">Jepara</a></li>
+					<li><a href="#">Banjar Negara</a></li>
+					<li><a href="#">Tegal</a></li>
+					<li><a href="#">Wonosobo</a></li>
+					<li><a href="#">Magelang</a></li>
+				</ul>
+			</li>
+			<li class="dropdown"><a href="#">Jateng Sport</a>
+				<ul class="isi-dropdown">
+					<li><a href="#">Sepak Bola</a></li>
+					<li><a href="#">Otomotif</a></li>
+					<li><a href="#">Oliympiade</a></li>
+					<li><a href="#">Mobile E-Sport</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Hiburan</a></li>
+			<li><a href="#">Jateng Live</a></li>
+			<li><a href="#">Lapor Masalah</a></li>
+		</ul>
+	</div>
+
+<div class="card">
+	<p class="judul">Tentang Kami </p>
+	
+	
+<div class="row">
+		<div class="column">
+			<img src="about-us.jpg" width="500px">
+		</div>
+</div>
+
+
+<p>Apa Kabar Jateng adalah sebuah kumpulan informasi yang terbaru, terpercaya yang sebagian besar membahas tentang lingkungan yang ada di daerah jateng. </p>
+<p>Karena seiring dengan perkembangan teknologi yang semakin pesat maka di buatlah sebuah web berita ini.</p>
+<p>Yang memudahkan para pembaca untuk mencari berita terbaru di suatu wilayah di jateng setiap harinya tanpa harus membeli media cetak seperti koran atau majalah </p>
+<p>Terdapat menu jateng news, seputar jateng, jateng sport, hiburan, jateng live, laporan masalah</p>
+
+<p>
+</p>
+
+
+<div class="footer">
+	
+	<div class="isi-footer">
+		<p>Jateng News</p>
+		<p>Seputar Jateng</p>
+	</div>
+	<div class="isi-footer">
+		<p>Jateng Sport</p>
+		<p>Hiburan</p>
+	</div>
+	<div class="isi-footer">
+		<p>Jateng Live</p>
+		<p>Lapor Masalah</p>
+	</div>
+	
+	<P><img src="image/judul.png" height="55px" width="170px">	
+	Connect with us
+<a href="#"><img src="dua.png"></p>	</a>
+	
+</div>
+
+
+</div>
+</body>
+</html>

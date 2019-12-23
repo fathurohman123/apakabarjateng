@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+	<title>Apa Kabar Jateng</title>
+ 
+</head>
+<body>
+ 
+	<style type="text/css">
+	html,body{
+		padding: 0;
+		margin:0;
+		font-family: roboto;
+	}
+	
+	.header {
+		Padding: 10px 0px 0px 10px;;
+		font-family : arial;	
+		color: blue;
+	}
+	.login {
+		position : relative;
+		top: 10px;
+		float: right;
+		color: white;
+		}
+	.login a {
+		font-size: 18px;
+		margin : 10px 40px 10px 10px;
+		color: white;
+		text-decoration: none;
+		}
+	.login a:hover{
+		color: #e60000;
+		font-style: italic;
+		}
+		
+	.topnav {
+		background: linear-gradient(to bottom, #0099ff 0%, #ffffff 110%);
+		position : relative;
+		width: 100%;
+		height: 120px;
+		margin: 0px;
+	}
+		
+	
+ 
+	.topnav ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+	}
+ 
+	.topnav > ul > li {
+		float: left;
+	}
+ 
+	
+	.topnav li a {
+		display: inline-block;
+		color: black;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		z-index: 5;
+	}
+ 
+	.topnav li a:hover{
+		color : #e60000
+	}
+ 
+	li.dropdown {
+		display: block;
+		z-index: 5;
+	}
+ 
+	.dropdown:hover .isi-dropdown {
+		display: block;
+		z-index: 5;
+	}
+ 
+	.isi-dropdown a:hover {
+		color: #e60000 !important;
+	}
+ 
+	.isi-dropdown {
+		position: absolute;
+		display:none;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 50;
+		background-color: #e6f2ff;
+	}
+ 
+	.isi-dropdown a {
+		color: #3c3c3c !important;
+		z-index: 5;
+	}
+ 
+	.isi-dropdown a:hover {
+		color: #e60000 !important;
+		z-index: 5;
+	}
+	
+	* {
+		box-sizing: border-box;
+	}
+	
+	.konten{
+		font-family : arial;
+		width : 100%;
+		}
+	
+	.row{
+		float : right;
+		width: 75%;
+		
+		}
+	.row1{
+		float : right;
+		width: 75%;
+		height: 300px;
+		background-color: none;
+		overflow-x: scroll;
+		overflow-y: hidden;
+		white-space: nowrap;
+		}
+	.row2{
+		float : left;
+		width: 100%;
+		padding-top: 50px;
+		
+		}
+
+	.column {
+		float: right;
+		width: 33.33%;
+		padding: 10px;
+		height: 300px;
+		position: relative;
+	}
+	.img-column{
+		width: 100%;
+		height: 100%;
+		}
+		
+	.text-img{
+		position : absolute;
+		top : 70%;
+		left : 10px;
+		color : white;
+		font-style : bold;
+		font-size: 20px;
+		padding: 0px 10px 0px 10px ;
+		}
+	.column2 {
+		width : 100%;
+		height: 200px;
+		padding: 10px;
+		}
+	.img-column2{
+		width : 30%;
+		height : 40%
+		padding-right: 10px;
+		float: left;
+		color : gray;
+		font-style : italic;
+		font-size: 12px;
+		}
+	.isi-column2{
+		padding-left: 20px;
+		overflow: auto;
+		
+		}
+	.judul-column2{
+		font-size: 30px;
+		font-style: bold;
+		padding :30px;
+		}
+	.column3{
+		width : 25%;
+		height : 200px;
+		float: left;
+		padding: 20px 35px 20px 35px;
+		
+		}
+	.isi-column3{
+		padding : 20px;
+		text-align: center;
+		}
+		
+	.isi-column3 a{
+		font-style: bold;
+		color: black;
+		text-decoration: none;
+		}
+	.isi-column3 a:hover{
+		color: gray;
+		text-decoration: underline;
+		}
+	.judul-column3{
+		font-size : 25px;
+		text-align: center;
+		font-color: red;
+		padding : 0px;
+		}
+	.column4{
+		width: 50%;
+		overflow : auto;
+		float : left;
+		}
+	.img-column4{
+		padding : 10px;
+		float: left;
+		width: 150px;
+		height : 120px;
+		}
+	.column-hr{
+		width: 100%;
+		}
+	.row:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	.row1:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	.row2:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	.sidebar-judul {
+		position: absolute;
+		top: 630px;
+		font-size: 25px;
+		font-style: bold;
+		color: orange;
+		height: 50px;
+		width: 25%;
+	}
+	.sidebar {
+		position: absolute;
+		height: 500px;
+		width: 25%;
+		padding-top: 16px;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		background-color : #ffccdd;
+	}
+
+	.sidebar a {
+		 padding: 6px 8px 6px 16px;
+		 text-decoration: none;
+		 font-size: 20px;
+		 color: #818181;
+		 display: block;
+	}
+
+	.sidebar a:hover {
+	  color: #f1f1f1;
+	}
+	
+	.isi-sidebar{
+		padding : 5px;
+		
+		}
+	.sidebar2{
+		position: absolute;
+		top: 700px;
+		left: 0px;
+		overflow-x: scroll;
+		overflow-y: scroll;
+		width: 25%;
+		height: 500px;
+		}
+	.isi-sidebar2{
+		
+		}
+		
+	.img-sidebar{
+		width : 120px;
+		height : 90px;
+		padding-right: 10px;
+		float: left;
+		}
+	
+	.footer {
+		position : absolute;
+		top: 1800px;
+		width: 100%;
+		height: 150px;
+		
+	}
+	.footer:after {
+		content: "";
+		display: table;
+		clear: both;
+		
+	}
+	.column-footer{
+		background-color: red;
+		width : 20%;
+		height: 100%;
+		padding : 20px 100px 40px 100px;
+		float : left;
+		
+		}
+	.column-footer2{
+		background-color: #0099ff;
+		width : 20%;
+		height: 100%;
+		padding : 20px 10px 0px 10px;
+		float : left;
+		
+		}
+	.isi-footer{
+		font-size : 15px;
+		text-align : left;
+		
+		}
+	.isi-footer a{
+		text-decoration: none;
+		color : white;
+		display: block;
+		}
+	hr{
+		display :block;
+		border-bottom-style : inset;
+		border-bottom-width: 2px gray;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		margin-left: 10%;
+		margin-right: 10%;
+		}
+	.tanggal{
+		color: gray;
+		font-size: 12px;
+		}
+	.search {
+		width: 100%;
+		top: -15px;
+		left : 350px;
+		position: relative;
+		display: flex;
+	}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 40px;
+  width: 500px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 50px;
+  height: 40px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.marque{
+	font-style: bold;
+	font-color: white;
+	}
+.isi-marquee{
+	padding-top: 8px;
+	
+	}
+</style>
+	<div class="topnav">
+	<div class="header">
+		<img src="image/judul.png" height="55px" width="170px">
+	</div>
+	<div class="login"><a href="login.html">Login</a></div>
+		<ul>
+			<li><a href="Tugas-pw-akhir.html">Home</a></li>
+			<li><a href="#">Jateng News</a></li>
+			<li class="dropdown"><a href="#">Seputar Jateng</a>
+				<ul class="isi-dropdown">
+					<li><a href="semarang.html">Semarang</a></li>
+					<li><a href="#">Kebumen</a></li>
+					<li><a href="#">Purworejo</a></li>
+					<li><a href="#">Banyumas</a></li>
+					<li><a href="#">Demak</a></li>
+					<li><a href="#">Jepara</a></li>
+					<li><a href="#">Banjar Negara</a></li>
+					<li><a href="#">Tegal</a></li>
+					<li><a href="#">Wonosobo</a></li>
+					<li><a href="#">Magelang</a></li>
+				</ul>
+			</li>
+			<li class="dropdown"><a href="#">Jateng Sport</a>
+				<ul class="isi-dropdown">
+					<li><a href="sepak-bola.html">Sepak Bola</a></li>
+					<li><a href="#">Otomotif</a></li>
+					<li><a href="#">Oliympiade</a></li>
+					<li><a href="#">Mobile E-Sport</a></li>
+				</ul>
+			</li>
+			<li class="dropdown"><a href="#">Peristiwa</a>
+				<ul class="isi-dropdown">
+					<li><a href="sepak-bola.html">Sepak Bola</a></li>
+					<li><a href="#">Politik</a></li>
+					<li><a href="#">Ekonomi</a></li>
+					<li><a href="#">Teknologi</a></li>
+					<li><a href="#">International</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Hiburan</a></li>
+			<li><a href="#">Jateng Live</a></li>
+			<li class="dropdown"><a href="#">Profil Kami</a>
+				<ul class="isi-dropdown">
+					<li><a href="about-us.html">Profil</a></li>
+					<li><a href="testimoni.html">Testimoni</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Lapor Masalah</a></li>
+		</ul>
+	<div class="wrap">
+   <div class="search">
+      <input type="text" class="searchTerm" placeholder="Cari sesuatu">
+      <button type="submit" class="searchButton">
+	  <img src="image/search.png" width="25px"height="25px">
+     </button>
+   </div>
+</div>
+	</div>
+<div class="konten">
+
+	<div class="marque" ><marquee bgcolor="#0099ff" height="30px" >
+		<div class="isi-marquee">Menteri Bintang Beri Penghargaan kepada Tiga Kades Responsif Gender, Diajak ke Sidang PBB - 
+	Ibu di Boyolali Disiram Air Keras Orang Tak Dikenal: Rasanya Perih, Rambut Saya Sampai Rontok - 
+	Bea Cukai Gerebek Pabrik Rokok Ilegal, Selamatkan Puluhan Miliar Kerugian Negara - 
+	Potret Sederhana Gibran Rakabuming Blusukan ke Pasar, Pakai Kaos Oblong dan Sandal Jepit Buluk -</div> </marquee>
+	</div>
+	<div class="sidebar">
+		<div class="isi-sidebar">
+			<img class="img-sidebar" src="image/side 1.png">
+			<p>BPPD jateng umumkan perubahan pajak kendaraan bermotor.</p>
+			<p class="tanggal">senin, 23 desember 2019 </p>
+		</div>
+		<hr>
+	  <div class="isi-sidebar">
+			<img class="img-sidebar" src="image/tabrak-kereta.jpg">
+			<p>Terabas palang KA, 7 penumpang mobil tewas tertabrak kereta.</p>
+			<p class="tanggal">senin, 23 desember 2019 </p>
+		</div>
+		<hr>
+		<div class="isi-sidebar">
+			<img class="img-sidebar" src="image/img2.jpg">
+			<p>Pilwalkot Solo, Diah Warih Anjari optimistis sedot suara perempuan.</p>
+			<p class="tanggal">senin, 23 desember 2019 </p>
+		</div>
+		<hr>
+		<div class="isi-sidebar">
+			<img class="img-sidebar" src="image/img3.jpg">
+			<p>Bank Jateng canangkan jadi BPD unggulan dan terdepan.</p>
+			<p class="tanggal">senin, 23 desember 2019 </p>
+		</div>
+		<hr>
+		<div class="isi-sidebar">
+			<img class="img-sidebar" src="image/img4.jpg">
+			<p>PSG libas Amiens dengan skor 4-1.</p>
+			<p class="tanggal">senin, 23 desember 2019 </p>
+		</div>
+		<hr>
+	  <div class="isi-sidebar">
+			<img class="img-sidebar" src="image/img5.jpg">
+			<p>Hasil dan klasemen Liga Inggris: Leicester tumbang.</p>
+			<p class="tanggal">senin, 23 desember 2019 </p>
+		</div>
+		<hr>
+		<div class="isi-sidebar">
+			<img class="img-sidebar" src="image/img6.jpg">
+			<p>Liverpool tuntaskan dahaga 38 tahun.</p>
+			<p class="tanggal">senin, 23 desember 2019 </p>
+		</div>
+		<hr>
+		<div class="isi-sidebar">
+			<img class="img-sidebar" src="image/img7.jpg">
+			<p>Mandiri Amal Insani gelar khitanan massal di Semarang.</p>
+			<p class="tanggal">senin, 23 desember 2019 </p>
+		</div>
+		<hr>
+	</div>
+	<div class="sidebar-judul">
+		<p>Peta Jateng</p>
+	</div>
+	<div class="sidebar2">
+		<div class="isi-sidebar2">
+			<img src="image/peta.jpg">
+		</div>
+	</div>
+		<div class="row">
+			<div class="column">
+				<img class="img-column" src="image/ulat bulu.jpg">
+				<div class="text-img">Ulat Bulu Serang Mangunharjo Semarang, Resahkan Pemotor Hingga Motor Jatuh ke Jurang</div>
+			</div>
+			<div class="column">
+				<img class="img-column" src="image/Tari-Ronggeng.jpg">
+					<div class="text-img">Mahasiswa UMP Purworjo sukses mementaskan Tari Ronggeng </div>
+			</div>
+			<div class="column">
+				<img class="img-column" src="image/brebes.jpg">
+					<div class="text-img"> Pembaruan jalan di brebes bertujuan untuk hindari kemacetan di hai hari besar</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="judul-column2">Jateng <font color="red">News</font></div>
+			</div>
+		<div class="row">
+			<div class="column4">
+				<img class="img-column4" src="image/g1.jpg">
+				Penuhi permintaan publik, Imigrasi tambah Kantor Penerbit E-Paspor
+					<p class="tanggal">senin, 23 desember 2019 </p>
+			</div>
+			<div class="column4">
+				<img class="img-column4" src="image/g2.jpg">
+				Menelusuri karut-marut penetapan hutan lindung Bintan 
+					<p class="tanggal">senin, 23 desember 2019 </p>
+			</div>
+		</div>
+		<div class="row">	
+			<div class="column4">
+				<img class="img-column4" src="image/g3.jpg">
+				Anang-Ashanty bisnis kuliner di Purwokerto
+					<p class="tanggal">senin, 23 desember 2019 </p>
+			</div>
+			<div class="column4">
+				<img class="img-column4" src="image/g4.jpg">
+				Ini menu favorit untuk tahun baru di Semarang
+					<p class="tanggal">senin, 23 desember 2019 </p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="column4">
+				<img class="img-column4" src="image/g5.jpg">
+				Tak perlu memaksakan keinginan
+					<p class="tanggal">senin, 23 desember 2019 </p>
+			</div>
+			<div class="column4">
+				<img class="img-column4" src="image/g6.jpg">
+				Klopp akui Liverpool tak maksimal, tapi cukup pantas jadi juara dunia
+					<p class="tanggal">senin, 23 desember 2019 </p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="judul-column2">Baca juga</div>
+		</div>
+		<div class="row">
+			<div class="column2">
+				<div class="img-column2"><img src="image/kapolri.jpg" width="100%" height="70%">
+				Kapolri Jenderal Pol. Idham Azis bersama Panglima TNI Marsekal TNI Hadi Tjahjanto mengecek kesiapan pengamanan si Gereja Katedral Semarang, 
+				Rabu, menjelang Natal 2019 dan Tahun Baru 2020. ANTARA/HO-Bidang Humas Polda Jateng</div>
+					<div class="isi-column2">Kapolri dan Panglima TNI cek pengamanan Katedral Semarang jelang Natal<br>
+					Semarang (ANTARA) - Kapolri Jenderal Polisi Idham Azis bersama Panglima TNI Marsekal TNI Hadi Tjahjanto 
+					mengecek kesiapan pengamanan di Gereja Katedral Semarang, Rabu, menjelang Natal 2019 dan Tahun Baru 2020.
+					Pimpinan Polri dan TNI tersebut melihat langsung pos penjagaan yang berada di sekitar gerbang gereja.
+					Sebanyak 40 kamera CCTV di sebar di berbagai titik sekitar Katedral yang bisa dipantau langsung di pos penjagaan tersebut.
+					Selain petugas kepolisian, sejumlah anggota organisasi kemasyarakatan serta Pramuka ikut membantu penjagaan.
+					Kapolri meminta seluruh personel Polri dan TNI melaksanakan tugas pengamanan Natal dan tahun baru dengan penuh keikhlasan.
+					Kapolri juga memberikan arahan kepada personel kepolisian yang berjaga di lokasi tersebut.
+					Ia juga meminta anggota ormas ikut dalam pengamanan selalu berkoordinasi dengan petugas keamanan.
+					"Tetap harus ada koordinasi dengan TNI/Polri agar pelaksanaan pengamanan sesuai dengan prosedur operasional standar yang sudah ditentukan," katanya.
+					Sementara itu, Ketua Panitia Natal Gereja Katedral Semarang Hendi Kiawan mengatakan bahwa pihaknya menyiapkan pengamanan secara internal 
+					selain pengamanan dari kepolisian dan TNI.Petugas keamanan, lanjut dia, selalu melakukan penyisiran di sekitar gereja setiap hari.</div>
+			</div>
+			</div>
+		<div class="row2">
+			<div class="column3">
+				<div class="isi-column3">
+					<div class="judul-column3">Peristiwa</div>
+				</div>
+				<div class="isi-column3">
+					<a href="#">Polresta Banyumas tetapkan tersangka penipuan berkedok umrah</a>
+				</div>
+				<div class="isi-column3">
+					<a href="#">Basarnas Cilacap berlakukan siaga khusus mulai 18 Des-8 Januari 2020</a>
+				</div>
+				<div class="isi-column3">
+					<a href="#">Amati gerhana Matahari cincin, warga diminta gunakan kacamata khusus</a>
+				</div>
+				<div class="isi-column3">
+					<a href="#">Ini lima anggota Dewan Pengawas KPK</a>
+				</div>
+			</div>
+			<div class="column3">
+				<div class="isi-column3">
+					<div class="judul-column3">Ekonomi</div>
+				</div>
+				<div class="isi-column3">
+					<a href="#">Harga bahan kebutuhan pokok di Purwokerto merangkak naik</a>
+				</div>
+				<div class="isi-column3">
+					<a href="#">Bandara Semarang gelar Posko Natal dan Tahun Baru 2020</a>
+				</div>
+				<div class="isi-column3">
+					<a href="#">Agar area pandang lebih bagus, concourse Borobudur dilebarkan</a>
+				</div>
+				<div class="isi-column3">
+					<a href="#">Pengembangan kawasan Borobudur tetap jaga kelestarian</a>
+				</div>
+			</div>
+			<div class="column3">
+				<div class="isi-column3">
+					<div class="judul-column3">Teknologi</div>
+				</div>
+				<div class="isi-column3">
+					<a href="#">Redmi 9 akan diluncurkan pada awal 2020</a>
+				</div>
+				<div class="isi-column3">
+					<a href="#">Mengapa Indonesia belum pakai 5G? Ini alasannya</a>
+				</div>
+				<div class="isi-column3">
+					<a href="#">Twitter Indonesia tanggapi konten porno didenda Rp100 juta</a>
+				</div>
+				<div class="isi-column3">
+					<a href="#">ASUS hadirkan laptop pertama di dunia dengan dua layar</a>
+				</div>
+			</div>
+			<div class="column3">
+				<div class="isi-column3">
+					<div class="judul-column3">Olahraga</div>
+				</div>
+				<div class="isi-column3">
+					<a href="#">Pebalap MotoGP Andrea Iannone ini diskors karena doping</a>
+				</div>
+				<div class="isi-column3">
+					<a href="#">Pelatih minta Greysia/Apriyani tingkatkan kebugaran tubuh</a>
+				</div>
+				<div class="isi-column3">
+					<a href="#">Penampilan ganda campuran di BWF Finals 2019 dievaluasi</a>
+				</div>
+				<div class="isi-column3">
+					<a href="#">Perawatan stadion Manahan Solo</a>
+				</div>
+			</div>
+			</div>
+</div>
+	
+<div class="footer">
+	<div class="column-footer">
+		<div class="isi-footer">
+		<a href="#">Jateng News</a>
+		<a href="#">Seputar Jateng</a>
+		<a href="#">Teknologi</a>
+		</div>
+	</div>
+	<div class="column-footer">
+		<div class="isi-footer">
+		<a href="#">Jateng Sport</a>
+		<a href="#">Pariwisata</a>
+		<a href="#">Hiburan</a>
+		</div>
+	</div>
+<div class="column-footer">
+		<div class="isi-footer">
+		<a href="#">Jateng Live</a>
+		<a href="#">Profil Kami</a>
+		<a href="#">Lapor Masalah</a>
+		</div>
+	</div>
+<div class="column-footer2">
+	<img src="image/judul.png" width="100%" height="100%">
+</div>
+<div class="column-footer2">
+	<p>Connect with us</p>
+	<a href="#"><img src="image/wa.png" width="50px" height="50px"></a>
+	<a href="#"><img src="image/fb.png" width="50px" height="50px"></a>
+	<a href="#"><img src="image/twitter.png" width="50px" height="50px"></a>
+	<a href="#"><img src="image/gmail.png" width="50px" height="50px"></a>
+</div>
+</div>
+
+					
+		
+
+	
+ 
+</body>
+</html>
